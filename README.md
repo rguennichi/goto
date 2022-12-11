@@ -79,6 +79,8 @@ servers:
     username: 'joe'
     port: 22
     environments:
+      dev:
+        hosts: ['vagrant@10.211.55.12']
       stg:
         hosts: ['i1.stg.server1.example', 'i2.stg.server1.example']
       prod:
