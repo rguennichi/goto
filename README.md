@@ -3,8 +3,17 @@
 Interactive shell for quick SSH access to application servers/environments via simple configuration file.
 
 ![image](docs/static/img/img_1.png)
+
+---
+
 ![image](docs/static/img/img_2.png)
+
+---
+
 ![image](docs/static/img/img_3.png)
+
+---
+
 ![image](docs/static/img/img_4.png)
 
 
