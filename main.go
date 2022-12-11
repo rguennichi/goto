@@ -168,7 +168,14 @@ func main() {
 							}
 
 							prefix := "set -x\n"
-							sshCmd := "ssh -l " + appm.Server.Username + " -p " + appm.Server.Port + " " + host + " -t '" + script.Exec + "'"
+							sshCmd := fmt.Sprintf("ssh -l %s -p %s %s -t 'sudo -iu %s -- sh -c \"cd %s && %s; /bin/bash\"'",
+								appm.Server.Username,
+								appm.Server.Port,
+								host,
+								appm.Username,
+								appm.Path,
+								script.Exec,
+							)
 
 							cmd := exec.Command("bash", "-c", prefix+sshCmd)
 
